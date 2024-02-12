@@ -16,7 +16,15 @@ export default function RecipeList() {
   return (
     <div>
       <h1>Recipes</h1>
-      {}
+      {recipes.map(r => {
+        let ingredientList = [];
+        r.ingredients.forEach(i => ingredientList.push(<li key={i}>{i}</li>));
+        return (
+        <div key={r.id}>
+          <h2>{r.name}</h2>
+          <ul>{ingredientList}</ul>
+          </div>
+          )})}
     </div>
   );
 }
