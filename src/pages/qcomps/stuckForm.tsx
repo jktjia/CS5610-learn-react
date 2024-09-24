@@ -1,14 +1,12 @@
-import { useState } from 'react';
-
 export default function Form() {
   let firstName = '';
   let lastName = '';
 
-  function handleFirstNameChange(e) {
+  function handleFirstNameChange(e: { target: { value: string; }; }) {
     firstName = e.target.value;
   }
 
-  function handleLastNameChange(e) {
+  function handleLastNameChange(e: { target: { value: string; }; }) {
     lastName = e.target.value;
   }
 

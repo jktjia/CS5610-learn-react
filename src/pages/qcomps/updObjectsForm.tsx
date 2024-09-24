@@ -11,17 +11,15 @@ export default function Scoreboard() {
     player.likescore++;
   }
 
-  function handleFirstNameChange(e) {
+  function handleFirstNameChange(e: { target: { value: string; }; }) {
     setPlayer({
       ...player,
       firstName: e.target.value,
     });
   }
 
-  function handleLastNameChange(e) {
-    setPlayer({
-      lastName: e.target.value
-    });
+  function handleLastNameChange(e: { target: { value: string; }; }) {
+    player.lastName = e.target.value;
   }
 
   return (

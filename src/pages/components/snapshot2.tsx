@@ -4,7 +4,7 @@ export default function Form() {
   const [to, setTo] = useState('Alice');
   const [message, setMessage] = useState('Hello');
 
-  function handleSubmit(e) {
+  function handleSubmit(e: { preventDefault: () => void; }) {
     e.preventDefault();
     setTimeout(() => {
       alert(`You said ${message} to ${to}`);

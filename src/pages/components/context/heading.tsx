@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import { LevelContext } from './levelContext.js';
+import { LevelContext } from './levelContext';
 
-export default function Heading({ children }) {
+export default function Heading({ children }: { children: React.ReactNode }) {
   const level = useContext(LevelContext);
   switch (level) {
     case 0:

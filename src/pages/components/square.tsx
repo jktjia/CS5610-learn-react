@@ -1,7 +1,8 @@
 import styles from '@/styles/Home.module.css';
-function Square({children}) {
+function Square({children}: {children: React.ReactNode}) {
   return (
     <div className={styles.square}>
+      <p>A Generic Square</p>
       {children}
     </div>
   )
@@ -20,7 +21,7 @@ export default function Holder() {
         />
       </Square>
       <Square>
-        <label for="image"> 
+        <label htmlFor="image"> 
           <b> Katsuko Saruhashi  </b>
         </label>
       </Square>

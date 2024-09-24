@@ -26,7 +26,7 @@ export default function RequestTracker() {
   );
 }
 
-function delay(ms) {
+function delay(ms: number) {
   return new Promise(resolve => {
     setTimeout(resolve, ms);
   });

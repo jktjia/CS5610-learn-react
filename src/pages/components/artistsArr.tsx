@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { ArtistType } from '../../types/artist';
 
 let nextId = 0;
 
 export default function List() {
   const [name, setName] = useState('');
-  const [artists, setArtists] = useState([]);
+  const [artists, setArtists] = useState<ArtistType[]>([]);
 
   return (
     <>

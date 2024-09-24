@@ -8,6 +8,13 @@
   min-height: 100vh;
 }
 
+.section {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;
@@ -113,7 +120,7 @@
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
+  border: 1px solid black;
   transition: background 200ms, border 200ms;
 }
 

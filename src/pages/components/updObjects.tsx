@@ -10,7 +10,7 @@ export default function Form() {
     }
   });
 
-  function handleCityChange(e) {
+  function handleCityChange(e: { target: { value: string; }; }) {
     const nextArtwork = { ...person.artwork, city: e.target.value };
     const nextPerson = { ...person, artwork: nextArtwork };
     setPerson(nextPerson);

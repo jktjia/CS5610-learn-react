@@ -15,7 +15,7 @@ export default function PersonData() {
        <>
             <textarea value={fName} onChange={e => setFName(e.target.value)} />
             <textarea value={lName} onChange={e => setLName(e.target.value)} />
-            <textarea value={age} onChange={e => setAge(e.target.value)} />
+            <textarea value={age} onChange={e => setAge(Number(e.target.value))} />
             <button onClick={handleClick}> Save </button>
             {person.fullName && <p> Person: {person.fullName} is {person.age} years old </p>}
        </>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ItemListProps } from '../../types/arrObj';
 
 let nextId = 3;
 const initialList = [
@@ -13,7 +14,7 @@ export default function BucketList() {
     initialList
   );
 
-  function handleToggleMyList(artworkId, nextSeen) {
+  function handleToggleMyList(artworkId: number, nextSeen: boolean) {
     const tmpList = myList.map(e => {
         if (e.id === artworkId) {
             e.seen = nextSeen
@@ -23,7 +24,7 @@ export default function BucketList() {
     setMyList(tmpList);
   }
 
-  function handleToggleYourList(artworkId, nextSeen) {
+  function handleToggleYourList(artworkId: number, nextSeen: boolean) {
     const tmpList = yourList.map(e => {
         if (e.id === artworkId) {
             e.seen = nextSeen
@@ -48,7 +49,7 @@ export default function BucketList() {
   );
 }
 
-function ItemList({ artworks, onToggle }) {
+function ItemList({ artworks, onToggle }: ItemListProps) {
   return (
     <ul>
       {artworks.map(artwork => (

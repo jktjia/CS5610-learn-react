@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import { LevelContext } from './levelContext.js';
+import { LevelContext } from './levelContext';
 import styles from '@/styles/Home.module.css'
 
-export default function Section({ children }) {
+export default function Section({ children }: { children: React.ReactNode }) {
   const level = useContext(LevelContext);
   console.log(level);
   return (

@@ -12,8 +12,8 @@ export const people = [{
   imageId: 'YfeOqp2'
 }];
 
-function getImageUrl(imageId) {
-    return "https://i.imgur.com/" + imageId + "s.jpg"
+function getImageUrl(imageId: string) {
+  return "https://i.imgur.com/" + imageId + "s.jpg"
 }
 export default function List() {
   const listItems = people.map(person =>
