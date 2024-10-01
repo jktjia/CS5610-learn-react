@@ -12,7 +12,7 @@ export default function RequestTracker() {
   }
 
   return (
-    <>
+    <div>
       <h3>
         Pending: {pending}
       </h3>
@@ -22,7 +22,7 @@ export default function RequestTracker() {
       <button onClick={handleClick}>
         Buy
       </button>
-    </>
+    </div>
   );
 }
 
