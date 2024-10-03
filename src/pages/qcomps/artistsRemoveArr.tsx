@@ -12,20 +12,20 @@ export default function List() {
   );
 
   return (
-    <>
+    <div>
       <h1>Inspiring sculptors:</h1>
       <ul>
         {artists.map(artist => (
           <li key={artist.id}>
             {artist.name}{' '}
             <button onClick={() => {
-              artists.splice(artist.id, 1)
+              setArtists(artists.filter(a => a.id != artist.id));
             }}>
               Delete
             </button>
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }

@@ -9,33 +9,35 @@ const initialList = [
 ];
 
 export default function BucketList() {
-  const [myList, setMyList] = useState(initialList);
+  const [myList, setMyList] = useState(initialList.map((e) => {return {...e}}));
   const [yourList, setYourList] = useState(
-    initialList
+    initialList.map((e) => {return {...e}})
   );
 
   function handleToggleMyList(artworkId: number, nextSeen: boolean) {
     const tmpList = myList.map(e => {
         if (e.id === artworkId) {
-            e.seen = nextSeen
-        }
+            return {...e, seen: !e.seen}
+        } else {
         return e
+        }
     });
     setMyList(tmpList);
   }
 
   function handleToggleYourList(artworkId: number, nextSeen: boolean) {
     const tmpList = yourList.map(e => {
-        if (e.id === artworkId) {
-            e.seen = nextSeen
-        }
-        return e
+      if (e.id === artworkId) {
+          return {...e, seen: !e.seen}
+      } else {
+      return e
+      }
     });
     setYourList(tmpList);
   }
 
   return (
-    <>
+    <div>
       <h1>Art Bucket List</h1>
       <h2>My list of art to see:</h2>
       <ItemList
@@ -45,7 +47,7 @@ export default function BucketList() {
       <ItemList
         artworks={yourList}
         onToggle={handleToggleYourList} />
-    </>
+    </div>
   );
 }
 
